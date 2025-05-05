@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Hack yeah! - Meer leren over hacken</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdownknop">
+          <i class="material-icons">menu</i>Menu
+        </a>
+        <ul class="dropdown-content">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Manieren_hacken.html">Manieren om te hacken</a></li>
+          <li><a href="hacken.html">Meer over hacken</a></li>
+          <li><a href="oefenen.html">Leer zelf hacken</a></li>
+          <li><a href="Wachtwoordchecker.html">Wachtwoordchecker</a></li>
+        </ul>
+      </li>
+    </ul>        
+  </nav>
+    <h1>Wachtwoordchecker 🖥️✅</h1>
+    <p>Check of een wachtwoord ook een goed wachtwoord is 🔑</p>
+    <input type="text" name="Wachtwoordchecker" id="dutch" placeholder="Invoer wachtwoord ..." />
+    <button py-click="check_password">Check</button>
+    <div id="output"></div>
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+    <br>
+</body>
+
+<footer>
+  <p>&copy; 2025 Hack Yeah!</p>
+</footer>
+</html>
