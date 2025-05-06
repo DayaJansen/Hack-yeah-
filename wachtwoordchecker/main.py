@@ -1,11 +1,12 @@
-from pyscript import Element
+import js
+from pyscript import display, when
 
-def check_password(*args):
-    input_value = Element("dutch").element.value
-    output = Element("output")
+@when("click", "#check-btn")
+def check_password(event):
+    input_value = js.document.getElementById("dutch").value
+    output_div = js.document.getElementById("output")
 
     if input_value == "123":
-        output.write("Goed wachtwoord! 🎉")
+        output_div.innerText = "Goed wachtwoord! 🎉"
     else:
-        output.write("Slecht wachtwoord 😢")
-__exports__ = ["check_password"]
+        output_div.innerText = "Slecht wachtwoord 😢"
