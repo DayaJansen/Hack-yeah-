@@ -30,6 +30,8 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
         output_div.innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111')."
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn, dit maakt een wachtwoord voorspelbaar
         output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'."
+    elif " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
+        output_div.innerText = "Een wachtwoord mag geen spaties bevatten."
     else:
         output_div.innerText = "Goed wachtwoord 🎉"
 
