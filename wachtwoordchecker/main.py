@@ -33,15 +33,17 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
         output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'. Dat maakt een wachtwoord voorspelbaar."
     else:
-        output_div.innerText = "Goed wachtwoord! 🎉" \
-        "Jouw wachtwoord voldoet aan alle eisen van een goed wachtwoord:" \
-        "1. Geen spaties" \
-        "2. Minimaal 10 tekens lang" \
-        "3. Minimaal één hoofdletter" \
-        "4. Minimaal één kleine letter" \
-        "5. Minimaal één cijfer" \
-        "6. Minimaal één speciaal teken" \
-        "7. Niet te voorspelbaar" 
+        output_div.innerHTML = (
+        "Goed wachtwoord! 🎉<br>"
+        "Jouw wachtwoord voldoet aan alle eisen van een goed wachtwoord:<br>"
+        "1. Geen spaties<br>"
+        "2. Minimaal 10 tekens lang<br>"
+        "3. Minimaal één hoofdletter<br>"
+        "4. Minimaal één kleine letter<br>"
+        "5. Minimaal één cijfer<br>"
+        "6. Minimaal één speciaal teken<br>"
+        "7. Niet te voorspelbaar"
+        )
 
 
 
