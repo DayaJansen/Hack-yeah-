@@ -17,23 +17,23 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     output_div = js.document.getElementById("output")
 
     if " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
-        output_div.innerText = "Een wachtwoord mag geen spaties bevatten."
+        js.document.querySelector("#output pre").innerText = "Een wachtwoord mag geen spaties bevatten."
     elif len(password) < 10:
-        output_div.innerText = "Een goed wachtwoord heeft minstens 10 tekens, probeer het nog eens!"
+        js.document.querySelector("#output pre").innerText = "Een goed wachtwoord heeft minstens 10 tekens, probeer het nog eens!"
     elif not any(c.isupper() for c in password):                        #Het programma kijkt of er een hoofdletter (isupper) aanwezig is
-        output_div.innerText = "Voeg minstens één hoofdletter toe."
+        js.document.querySelector("#output pre").innerText = "Voeg minstens één hoofdletter toe."
     elif not any(c.islower() for c in password):                        #Het programma kijkt of er een kleine letter (islower) aanwezig is
-        output_div.innerText = "Voeg minstens één kleine letter toe."
+        js.document.querySelector("#output pre").innerText = "Voeg minstens één kleine letter toe."
     elif not any(c.isdigit() for c in password):                        #Het programma kijkt of er een cijfer (isdigit) aanwezig is
-        output_div.innerText = "Voeg minstens één cijfer toe."
+        js.document.querySelector("#output pre").innerText = "Voeg minstens één cijfer toe."
     elif not any(c in string.punctuation for c in password):            #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
-        output_div.innerText = "Voeg minstens één speciaal teken toe."
+        js.document.querySelector("#output pre").innerText = "Voeg minstens één speciaal teken toe."
     elif re.search(r"(.)\1{2,}", password):                             #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
-        output_div.innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
+        js.document.querySelector("#output pre").innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
-        output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'. Dat maakt een wachtwoord voorspelbaar."
+        js.document.querySelector("#output pre").innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'. Dat maakt een wachtwoord voorspelbaar."
     else:
-        js.document.querySelector("#output pre").innerText = (              #Dit zorgt ervoor dat de lijst hieronder onder elkaar wordt weergegeven in plaats van achter elkaar
+        js.document.querySelector("#output pre").innerText = (
         "Goed wachtwoord! 🎉\n"
         "Jouw wachtwoord voldoet aan alle eisen van een goed wachtwoord:\n"
         "1. Geen spaties\n"
