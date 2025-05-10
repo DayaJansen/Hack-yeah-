@@ -3,7 +3,6 @@ import string
 import re
 from pyscript import display, when
 
-@when("click", "#check-btn")                    #Dit geeft aan dat de onderstaande fucnties gelijk uitgevoerd moeten worden zodra de knop 'Check' wordt ingedrukt.
 
 def has_sequential_chars(pwd, length=4):        #De functie checkt elk deel van het wachtwoord of er karakters oplopend zijn volgens de ASCII-tabel.
     for i in range(len(pwd) - length + 1):
@@ -12,10 +11,10 @@ def has_sequential_chars(pwd, length=4):        #De functie checkt elk deel van 
             return True
     return False
 
+@when("click", "#check-btn")                    #Dit geeft aan dat de onderstaande fucnties gelijk uitgevoerd moeten worden zodra de knop 'Check' wordt ingedrukt.
 def check_password(event):              #Nieuwe functie die kijkt of een gegeven wachtwoord ook een goed wachtwoord is
-    input_value = js.document.getElementById("dutch").value     
+    password = str(js.document.getElementById("dutch").value)    
     output_div = js.document.getElementById("output")
-    password = str(input_value)
 
     if len(password) < 8:
         output_div.innerText = "Een goed wachtwoord heeft minstens 8 tekens, probeer het nog eens!"
