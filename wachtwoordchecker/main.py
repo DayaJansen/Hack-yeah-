@@ -18,8 +18,8 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
 
     if " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
         output_div.innerText = "Een wachtwoord mag geen spaties bevatten."
-    elif len(password) < 8:
-        output_div.innerText = "Een goed wachtwoord heeft minstens 8 tekens, probeer het nog eens!"
+    elif len(password) < 10:
+        output_div.innerText = "Een goed wachtwoord heeft minstens 10 tekens, probeer het nog eens!"
     elif not any(c.isupper() for c in password):                        #Het programma kijkt of er een hoofdletter (isupper) aanwezig is
         output_div.innerText = "Voeg minstens één hoofdletter toe."
     elif not any(c.islower() for c in password):                        #Het programma kijkt of er een kleine letter (islower) aanwezig is
@@ -29,11 +29,19 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     elif not any(c in string.punctuation for c in password):            #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
         output_div.innerText = "Voeg minstens één speciaal teken toe."
     elif re.search(r"(.)\1{2,}", password):                             #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
-        output_div.innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111')."
-    elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn, dit maakt een wachtwoord voorspelbaar
-        output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'."
+        output_div.innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
+    elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
+        output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'. Dat maakt een wachtwoord voorspelbaar."
     else:
-        output_div.innerText = "Goed wachtwoord 🎉"
+        output_div.innerText = "Goed wachtwoord! 🎉" \
+        "Jouw wachtwoord voldoet aan alle eisen van een goed wachtwoord:" \
+        "1. Geen spaties" \
+        "2. Minimaal 10 tekens lang" \
+        "3. Minimaal één hoofdletter" \
+        "4. Minimaal één kleine letter" \
+        "5. Minimaal één cijfer" \
+        "6. Minimaal één speciaal teken" \
+        "7. Niet te voorspelbaar" 
 
 
 
