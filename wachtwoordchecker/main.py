@@ -16,7 +16,9 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     password = str(js.document.getElementById("dutch").value)    
     output_div = js.document.getElementById("output")
 
-    if len(password) < 8:
+    if " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
+        output_div.innerText = "Een wachtwoord mag geen spaties bevatten."
+    elif len(password) < 8:
         output_div.innerText = "Een goed wachtwoord heeft minstens 8 tekens, probeer het nog eens!"
     elif not any(c.isupper() for c in password):                        #Het programma kijkt of er een hoofdletter (isupper) aanwezig is
         output_div.innerText = "Voeg minstens één hoofdletter toe."
@@ -30,8 +32,6 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
         output_div.innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111')."
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn, dit maakt een wachtwoord voorspelbaar
         output_div.innerText = "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'."
-    elif " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
-        output_div.innerText = "Een wachtwoord mag geen spaties bevatten."
     else:
         output_div.innerText = "Goed wachtwoord 🎉"
 
