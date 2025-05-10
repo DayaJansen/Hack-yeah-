@@ -15,7 +15,7 @@ def has_sequential_chars(pwd, length=4):        #De functie checkt elk deel van 
 def check_password(event):              #Nieuwe functie die kijkt of een gegeven wachtwoord ook een goed wachtwoord is
     input_value = js.document.getElementById("dutch").value     
     output_div = js.document.getElementById("output")
-    password = input_value
+    password = str(input_value)
 
     if len(password) < 8:
         output_div.innerText = "Een goed wachtwoord heeft minstens 8 tekens, probeer het nog eens!"
