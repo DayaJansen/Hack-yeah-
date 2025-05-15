@@ -31,7 +31,10 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     elif not any(c in string.punctuation for c in password):            #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
         js.document.querySelector("#output pre").innerText = "Voeg minstens één speciaal teken toe."
     elif any(word in password.lower() for word in common_words):        #Het programma kijkt of er woorden uit de lijst common_words in het wachtwoord staan. Het maakt hierbij niet uit of het met een hoofdletter is geschreven (dat komt doordat er .lower() in staat).
-        output_div.innerText = "Vermijd bekende woorden of patronen zoals 'test', 'welkom', of 'qwerty'."
+        for word in common_words:                   #Hier kijkt het programma precies welk bekend woord in het wachtwoord voorkomt en geeft hij vervolgens dit woord terug.
+            if word in password.lower():
+                output_div.innerText = "Vermijd het gebruik van bekende woorden zoals '{word}' in je wachtwoord."
+                return
     elif re.search(r"(.)\1{2,}", password):                             #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
         js.document.querySelector("#output pre").innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
