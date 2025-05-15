@@ -4,8 +4,6 @@ import re
 from pyscript import display, when
 
 
-common_words = ["test", "welkom", "qwerty", "password", "wachtwoord", "admin", "abc123", "letmein", "hoi"]  #Dit zijn de meest voorkomende woorden in wachtwoorden. Dit is natuurlijk heel voorspelbaar.
-
 def has_sequential_chars(pwd, length=4):        #De functie checkt elk deel van het wachtwoord of er karakters oplopend zijn volgens de ASCII-tabel (zoals abcd of 1234).
     for i in range(len(pwd) - length + 1):
         chunk = pwd[i:i+length]
@@ -18,6 +16,13 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     password = str(js.document.getElementById("dutch").value)    
     output_div = js.document.getElementById("output")
 
+    common_words = ["test", "welkom", "qwerty", "password", "wachtwoord", "admin", "abc123", "letmein", "hoi"]  #Dit zijn de meest voorkomende woorden in wachtwoorden. Dit is natuurlijk heel voorspelbaar.
+    for word in common_words:           #Hier kijkt het programma of 1 van de woorden hierboven in het wachtwoord voorkomt. Als dit zo is, geeft het programma terug welk woord het heeft gevonden.
+        if word in password.lower():
+            js.document.querySelector("#output pre").innerText = (
+                f"Vermijd het gebruik van bekende woorden zoals '{word}' in je wachtwoord."
+            )
+            return
     if " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
         js.document.querySelector("#output pre").innerText = "Een wachtwoord mag geen spaties bevatten."        #Dit is wat het programma vervolgens teruggeeft, zodat je het aan kan passen.
     elif len(password) < 10:
@@ -30,11 +35,6 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
         js.document.querySelector("#output pre").innerText = "Voeg minstens één cijfer toe."
     elif not any(c in string.punctuation for c in password):            #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
         js.document.querySelector("#output pre").innerText = "Voeg minstens één speciaal teken toe."
-    elif any(word in password.lower() for word in common_words):        #Het programma kijkt of er woorden uit de lijst common_words in het wachtwoord staan. Het maakt hierbij niet uit of het met een hoofdletter is geschreven (dat komt doordat er .lower() in staat).
-        for word in common_words:                   #Hier kijkt het programma precies welk bekend woord in het wachtwoord voorkomt en geeft hij vervolgens dit woord terug.
-            if word in password.lower():
-                output_div.innerText = f"Vermijd het gebruik van bekende woorden zoals '{word}' in je wachtwoord."
-                return
     elif re.search(r"(.)\1{2,}", password):                             #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
         js.document.querySelector("#output pre").innerText = "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
     elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
