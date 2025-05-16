@@ -1,98 +1,97 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #faf7fe;
+/* algemene opmaak */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color:#f4f4f4;
+}
+/* navigatiebar */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #2e7d32;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 999;
 }
 
-nav ul { 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    position: relative;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    background-color: #f2f2f2;
-  }
-  
-  nav ul li a:hover {
-    background-color: #ddd;
-  }
-  
-  /* algemeen */
-  
-  /* dropdown menu */
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    display: flex;
-  }
-  
-  nav ul li {
-    position: relative;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    font-size: 16px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #555;
-  }
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
 
-  /* dropdown menu */
- .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #faf7fe;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content li {
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-content li a {
-    color: #333;
-    padding: 10px;
-    text-decoration: none;
-    background-color: #f9f9f9;
-  }
-  
-  .dropdown-content li a:hover {
-    background-color: #20304a;
-  }
-  
-  /* icon*/
-  .material-icons {
-    vertical-align: middle; 
-    margin-right: 10px; 
-    font-size: 24px; 
-  }
+.icon {
+  width: 32px;
+  height: 32px;
+}
 
-  /* ik hebb dit gekopieerd van mijn webdesign project dus miss moeten we eht een beetje aanpassen */
+/* hackwer foto*/
+.hacker {
+  display: flex;
+  margin-top: 60px; /* ruimte voor navbar */
+  height: 100vh;
+  width: 100%;
+}
+
+.hacker-image {
+  flex: 1;
+  background-image: url('hacker.png'); /* dezelfde of vergelijkbare afbeelding */
+  background-size: cover;
+  background-position: center;
+}
+
+.hacker-text {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.hacker-text h1 {
+  font-size: 48px;
+  font-family: 'Impact', sans-serif;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hacker-text p {
+  max-width: 400px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* informatie */
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 40px;
+}
+
+.links, .rechts {
+  flex: 1;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.hacker-img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
