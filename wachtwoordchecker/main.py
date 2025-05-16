@@ -15,7 +15,6 @@ def has_sequential_chars(pwd, length=4):        #De functie checkt elk deel van 
 def check_password(event):              #Nieuwe functie die kijkt of een gegeven wachtwoord ook een goed wachtwoord is
     password = str(js.document.getElementById("dutch").value)    
     output_div = js.document.getElementById("output")
-
     common_words = ["test", "welkom", "qwerty", "password", "wachtwoord", "admin", "abc123", "letmein", "hoi"]  #Dit zijn de meest voorkomende woorden in wachtwoorden. Dit is natuurlijk heel voorspelbaar.
 
 
