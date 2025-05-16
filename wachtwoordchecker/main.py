@@ -16,6 +16,9 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     password = str(js.document.getElementById("dutch").value)    
     output_div = js.document.getElementById("output")
 
+    common_words = ["test", "welkom", "qwerty", "password", "wachtwoord", "admin", "abc123", "letmein", "hoi"]  #Dit zijn de meest voorkomende woorden in wachtwoorden. Dit is natuurlijk heel voorspelbaar.
+
+
     score = 0                           #Dit stuk berekent je score, je kan maximaal 5 punten score, 5 punten is een goed wachtwoord. Je krijgt 1 punt voor een wachtwoord met meer dan 10 tekens, 1 punt voor een hoofd- en kleine letter, 1 punt voor een cijfer, 1 punt voor een speciaal teken en je krijgt het laatste punt voor het hebben van geen spaties en als je wachtwoord niet voorspelbaar is.
     if len(password) >= 10:
         score += 1
@@ -34,7 +37,6 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
         score += 1
 
 
-    common_words = ["test", "welkom", "qwerty", "password", "wachtwoord", "admin", "abc123", "letmein", "hoi"]  #Dit zijn de meest voorkomende woorden in wachtwoorden. Dit is natuurlijk heel voorspelbaar.
     for word in common_words:           #Hier kijkt het programma of 1 van de woorden hierboven in het wachtwoord voorkomt. Als dit zo is, geeft het programma terug welk woord het heeft gevonden.
         if word in password.lower():
             js.document.querySelector("#output pre").innerText = (
