@@ -38,15 +38,19 @@ def start_game(event):
 
 @when("click", "#real-btn")
 def handle_real_click(event):
+    if not game_started:
+        return
     check_answer(user_thinks_real=True)
 
 @when("click", "#phishing-btn")
 def handle_phishing_click(event):
+    if not game_started:
+        return
     check_answer(user_thinks_real=False)
 
 @when("click", "#next-btn")
 def next_email(event):
-    global current_index
+    global current_index, game_started
 
     current_index += 1
     if current_index >= len(emails):
