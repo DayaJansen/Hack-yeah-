@@ -33,13 +33,17 @@
       <pre id="email-text">Klik op 'Start' om te beginnen...</pre>
     </div>
 
-    <div class="buttons">
+    <button id="start-btn">Start</button>
+
+    <div class="buttons" style="display:none;">
       <button id="real-btn">✅ Echt</button>
       <button id="phishing-btn">🚫 Phishing</button>
     </div>
 
     <p id="feedback"></p>
-    <button id="next-btn">Volgende</button>
+    <button id="next-btn" style="display:none;">Volgende</button>
+
+    <p id="final-score" style="font-weight:bold; font-size:1.2rem; margin-top:1rem;"></p>
   </div>
 
   <script type="py" src="main.py"></script>
