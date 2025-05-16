@@ -28,9 +28,9 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
     if any(c in string.punctuation for c in password):
         score += 1
     if (
-        " " not in password and
-        not re.search(r"(.)\1{2,}", password) and
-        not has_sequential_chars(password) and
+        " " not in password and                         #geen spaties
+        not re.search(r"(.)\1{2,}", password) and       #Geen veel herhaalde tekens
+        not has_sequential_chars(password) and          #geen opeenvolgende tekens 1234 of abcd
         not any(word in password.lower() for word in common_words)
     ):
         score += 1
