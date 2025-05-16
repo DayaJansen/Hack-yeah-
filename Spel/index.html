@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Hack yeah! - Meer leren over hacken</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdownknop">
+          <i class="material-icons">menu</i>Menu
+        </a>
+        <ul class="dropdown-content">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Manieren_hacken.html">Manieren om te hacken</a></li>
+          <li><a href="../Voorkomen_hacken.html">Voorkomen gehackt worden</a></li>
+        </ul>
+      </li>
+    </ul>        
+  </nav>
+  <div class="container">
+    <h1>Phishing Detector</h1>
+    <p>Is dit bericht echt of phishing?</p>
+
+    <div id="email-box">
+      <pre id="email-text">Klik op 'Start' om te beginnen...</pre>
+    </div>
+
+    <div class="buttons">
+      <button id="real-btn">✅ Echt</button>
+      <button id="phishing-btn">🚫 Phishing</button>
+    </div>
+
+    <p id="feedback"></p>
+    <button id="next-btn">Volgende</button>
+  </div>
+
+  <script type="py" src="main.py"></script>
+</body>
+
+<footer>
+  <p>&copy; 2025 Hack Yeah!</p>
+</footer>
+</html>
