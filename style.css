@@ -43,7 +43,7 @@ nav a {
 
 .hacker-image {
   flex: 1;
-  background-image: url('hacker.png'); /* dezelfde of vergelijkbare afbeelding */
+  background-image: url('hacker.png'); 
   background-size: cover;
   background-position: center;
 }
@@ -94,4 +94,11 @@ h2 {
   width: 100%;
   max-width: 400px;
   margin-top: 20px;
+}
+
+.wachtwoord-image{
+  flex: 1;
+  background-image: url('wachtwoord.png'); 
+  background-size: cover;
+  background-position: center;
 }
