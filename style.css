@@ -98,7 +98,7 @@ h2 {
 
 .wachtwoord-image{
   flex: 1;
-  background-image: url('Icons/wachtwoord.png'); 
+  background-image: url('../Hack-yeah-/Icons/wachtwoord.png'); 
   background-size: cover;
   background-position: center;
 }
