@@ -3,21 +3,21 @@ from js import document
 
 emails = [                      #Dit is de lijst waarin alle emails zijn opgeslagen, deze krijg je te zien in het spel. isPhishing = of het om phishing gaat of niet.
     {"text": "Uw bankrekening wordt geblokkeerd. Klik hier om te voorkomen: http://bankveiligheid-login.com", "isPhishing": True},
-    {"text": "Uw pakket is onderweg! Track & Trace: PostNL App", "isPhishing": False},
     {"text": "Gefeliciteerd! U heeft een iPhone gewonnen. Klik hier om te claimen.", "isPhishing": True},
     {"text": "Je Apple ID werd gebruikt om in te loggen op een nieuw apparaat.", "isPhishing": False},
     {"text": "Uw belastingteruggave is beschikbaar. Klik op de link om uw gegevens te bevestigen: http://belastingdienst-check.com", "isPhishing": True},
     {"text": "Uw bestelling bij Bol.com is succesvol geplaatst en wordt binnenkort geleverd.", "isPhishing": False},
+    {"text": "Je hebt een uitnodiging ontvangen voor een Teams-meeting van je docent.", "isPhishing": False},
+    {"text": "Uw pakket is onderweg! Track & Trace: PostNL App", "isPhishing": False},
     {"text": "We hebben verdachte activiteiten gedetecteerd op uw PayPal-account. Log onmiddellijk in om uw account te beveiligen.", "isPhishing": True},
-    {"text": "Je hebt je wachtwoord voor Instagram succesvol gewijzigd. Was jij dit niet? Klik hier.", "isPhishing": False},
     {"text": "U komt in aanmerking voor een vergoeding van €275. Bevestig nu uw rekeningnummer.", "isPhishing": True},
     {"text": "Uw OV-chipkaart is bijna verlopen. Vraag hier direct een nieuwe aan via onze website.", "isPhishing": False},
     {"text": "Er staat een ongebruikelijke login op uw Microsoft-account. Klik hier om uw identiteit te verifiëren.", "isPhishing": True},
     {"text": "De school heeft het rooster voor volgende week aangepast. Bekijk het hier in Magister.", "isPhishing": False},
     {"text": "Uw telefoonabonnement wordt binnenkort verlengd. Klik hier om uw bankgegevens bij te werken.", "isPhishing": True},
-    {"text": "Je hebt een uitnodiging ontvangen voor een Teams-meeting van je docent.", "isPhishing": False},
     {"text": "Je hebt een cadeaubon van €100 gewonnen van de HEMA! Vul je gegevens in om hem te ontvangen.", "isPhishing": True},
     {"text": "Er is een update beschikbaar voor je DigiD app. Update deze via de officiële app store.", "isPhishing": False}, 
+    {"text": "Je hebt je wachtwoord voor Instagram succesvol gewijzigd. Was jij dit niet? Klik hier.", "isPhishing": False},
     ]
 
 current_index = -1          #Geeft aan welke e-mail wordt getoond. -1 = nog niet gestart, we willen niet dat het spel gelijk start, we willen dat er eerst op een start-knop wordt gedrukt.
