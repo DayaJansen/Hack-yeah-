@@ -2,7 +2,7 @@
 
 ## 1. Over het project
 
-**Hack yeah** is een interactieve en educatieve website gericht op brugklasleerlingen (11 t/m 13 jaar). Het doel van het project is om jongeren op een toegankelijke en praktische manier bewust te maken van internetveiligheid en de gevaren van hacken.
+**Hackproof** is een interactieve en educatieve website gericht op brugklasleerlingen (11 t/m 13 jaar). Het doel van het project is om jongeren op een toegankelijke en praktische manier bewust te maken van internetveiligheid en de gevaren van hacken.
 
 We willen leerlingen leren:
 - Wat hacken is (zowel technisch als moreel)
