@@ -9,7 +9,6 @@ emails = [                      #Dit is de lijst waarin alle emails zijn opgesla
     {"text": "Uw bestelling bij Bol.com is succesvol geplaatst en wordt binnenkort geleverd.", "isPhishing": False},
     {"text": "Je hebt een uitnodiging ontvangen voor een Teams-meeting van je docent.", "isPhishing": False},
     {"text": "Uw pakket is onderweg! Track & Trace: PostNL App", "isPhishing": False},
-    {"text": "We hebben verdachte activiteiten gedetecteerd op uw PayPal-account. Log onmiddellijk in om uw account te beveiligen.", "isPhishing": True},
     {"text": "U komt in aanmerking voor een vergoeding van €275. Bevestig nu uw rekeningnummer.", "isPhishing": True},
     {"text": "Uw OV-chipkaart is bijna verlopen. Vraag hier direct een nieuwe aan via onze website.", "isPhishing": False},
     {"text": "Er staat een ongebruikelijke login op uw Microsoft-account. Klik hier om uw identiteit te verifiëren.", "isPhishing": True},
