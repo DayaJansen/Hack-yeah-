@@ -1,11 +1,11 @@
-/* algemene opmaak */
+/* Algemene opmaak */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color:#f4f4f4;
+  background-color: #f4f4f4;
 }
-/* navigatiebar */
 
+/* Navigatiebalk */
 nav {
   position: fixed;
   top: 0;
@@ -33,19 +33,27 @@ nav a {
   height: 32px;
 }
 
-/* hackwer foto*/
+/* Layout hoofdsectie */
 .hacker {
   display: flex;
-  margin-top: 60px; /* ruimte voor navbar */
+  margin-top: 60px;
   height: 100vh;
   width: 100%;
 }
 
-.hacker-image {
+.hacker-image,
+.wachtwoord-image {
   flex: 1;
-  background-image: url('Icons/hacker.png'); 
   background-size: cover;
   background-position: center;
+}
+
+.hacker-image {
+  background-image: url('Icons/hacker.png');
+}
+
+.wachtwoord-image {
+  background-image: url('/Hack-yeah-/Icons/wachtwoord.png');
 }
 
 .hacker-text {
@@ -71,10 +79,63 @@ nav a {
   font-size: 16px;
 }
 
-/* informatie */
+/* Input en knop */
+#dutch, #check-btn {
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  margin-top: 16px;
+}
+
+#dutch {
+  padding: 12px 16px;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#dutch:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+#check-btn {
+  padding: 12px 24px;
+  font-weight: bold;
+  color: black;
+  background-color: #2e7d32;
+  border: none;
+  cursor: pointer;
+}
+
+#check-btn:hover {
+  background-color: #256428;
+  transform: scale(1.05);
+}
+#output{
+  display: none
+}
+#output pre {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #000;
+  color: #3ca841;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  border: 2px solid #137213;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px #2e7d32;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Info-sectie */
 .info {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 60px 40px;
   gap: 40px;
@@ -94,11 +155,4 @@ h2 {
   width: 100%;
   max-width: 400px;
   margin-top: 20px;
-}
-
-.wachtwoord-image{
-  flex: 1;
-  background-image: url('../Hack-yeah-/Icons/wachtwoord.png'); 
-  background-size: cover;
-  background-position: center;
 }

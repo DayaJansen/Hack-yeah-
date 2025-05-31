@@ -38,53 +38,63 @@ def check_password(event):              #Nieuwe functie die kijkt of een gegeven
 
     for word in common_words:           #Hier kijkt het programma of 1 van de woorden hierboven in het wachtwoord voorkomt. Als dit zo is, geeft het programma terug welk woord het heeft gevonden.
         if word in password.lower():
+            output_div.style.display = "block"
             js.document.querySelector("#output pre").innerText = (
                 f"Vermijd het gebruik van bekende woorden zoals '{word}' in je wachtwoord."
                 f"🔢 Wachtwoordscore: {score}/5"
             )
             return
-    if " " in password:                                               #Het programma checkt of er spaties aanwezig zijn
+    if " " in password:           
+        output_div.style.display = "block"                                    #Het programma checkt of er spaties aanwezig zijn
         js.document.querySelector("#output pre").innerText = (
             "Een wachtwoord mag geen spaties bevatten.\n\n"
             f"🔢 Wachtwoordscore: {score}/5"
         )
         #Dit is wat het programma vervolgens teruggeeft, zodat je het aan kan passen (je score en wat je moet aanpassen).
     elif len(password) < 10:
+        output_div.style.display = "block"
         js.document.querySelector("#output pre").innerText = (
             "Een goed wachtwoord heeft minstens 10 tekens, probeer het nog eens!\n\n"
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif not any(c.isupper() for c in password):                        #Het programma kijkt of er een hoofdletter (isupper) aanwezig is
+    elif not any(c.isupper() for c in password):   
+        output_div.style.display = "block"                     #Het programma kijkt of er een hoofdletter (isupper) aanwezig is
         js.document.querySelector("#output pre").innerText = (
             "Voeg minstens één hoofdletter toe.\n\n"
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif not any(c.islower() for c in password):                        #Het programma kijkt of er een kleine letter (islower) aanwezig is
+    elif not any(c.islower() for c in password):
+        output_div.style.display = "block"                        #Het programma kijkt of er een kleine letter (islower) aanwezig is
         js.document.querySelector("#output pre").innerText = (
             "Voeg minstens één kleine letter toe."
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif not any(c.isdigit() for c in password):                        #Het programma kijkt of er een cijfer (isdigit) aanwezig is
+    elif not any(c.isdigit() for c in password):
+        output_div.style.display = "block"                        #Het programma kijkt of er een cijfer (isdigit) aanwezig is
         js.document.querySelector("#output pre").innerText = (
             "Voeg minstens één cijfer toe."
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif not any(c in string.punctuation for c in password):            #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
+    elif not any(c in string.punctuation for c in password): 
+        output_div.style.display = "block"           #Het programma kijkt of er een speciaal teken (string.punctuation) aanwezig is
         js.document.querySelector("#output pre").innerText = (
             "Voeg minstens één speciaal teken toe."
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif re.search(r"(.)\1{2,}", password):                             #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
+    elif re.search(r"(.)\1{2,}", password):   
+        output_div.style.display = "block"                          #Het programma zoekt naar één teken dat minstens 2 keer wordt herhaald
         js.document.querySelector("#output pre").innerText = (
             "Gebruik niet te veel herhaalde tekens achter elkaar (zoals 'aaa' of '111'). Dat maakt een wachtwoord voorspelbaar."
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    elif has_sequential_chars(password):                                #Het programma checkt of er opeenvolgende tekens aanwezig zijn
+    elif has_sequential_chars(password):    
+        output_div.style.display = "block"                            #Het programma checkt of er opeenvolgende tekens aanwezig zijn
         js.document.querySelector("#output pre").innerText = (
             "Vermijd opeenvolgende tekens zoals 'abcd' of '1234'. Dat maakt een wachtwoord voorspelbaar."
             f"🔢 Wachtwoordscore: {score}/5"
         )
-    else:                                                               #Als alles in orde is geeft het programma aan dat het een goed wachtwoord is.
+    else:                     
+        output_div.style.display = "block"                                          #Als alles in orde is geeft het programma aan dat het een goed wachtwoord is.
         js.document.querySelector("#output pre").innerText = (
         "Goed wachtwoord! 🎉\n"
         "Jouw wachtwoord voldoet aan alle eisen van een goed wachtwoord:\n"
