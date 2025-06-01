@@ -158,8 +158,20 @@ h2 {
   width: 100%;
   max-width: 400px;
   margin-top: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); /* green shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.hacker-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 255, 0, 0.4);
+}
+.hacker-img.no-hover:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); /* original shadow */
+}
 #email-box {
   background-color: #000;
   color: #3ca841;
