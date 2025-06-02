@@ -173,9 +173,9 @@ h2 {
   box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); /* original shadow */
 }
 #email-box {
-  background-color: #000;
-  color: #3ca841;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  color: #000000;
+  font-family: 'Arial';
   font-size: 16px;
   padding: 20px;
   border: 2px solid #137213;
@@ -185,16 +185,14 @@ h2 {
   margin: 20px 0;
 
   white-space: pre-wrap;
-  overflow-wrap: anywhere;
   word-break: break-word;
 }
-
-
 
 .buttons {
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  align-items: center;
 }
 
 #real-btn, #phishing-btn, #start-btn, #next-btn {
@@ -204,8 +202,9 @@ h2 {
   border: none;
   cursor: pointer;
   background-color: #2e7d32;
-  color: white;
+  color: rgb(0, 0, 0);
   transition: 0.3s;
+  
 }
 
 #real-btn:hover, #phishing-btn:hover, #start-btn:hover, #next-btn:hover {
@@ -225,5 +224,12 @@ footer {
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: block;
+}
+
+.icon {
+  height: 20px;         /* of 24px, afhankelijk van je knopgrootte */
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;    /* ruimte tussen icoon en tekst */
 }
 
