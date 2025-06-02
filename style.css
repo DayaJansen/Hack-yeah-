@@ -124,7 +124,6 @@ nav a {
   padding: 20px;
   background-color: #ffffff;
   color: #000000;
-  /* font-family: 'Courier New', Courier; */
   font-size: 18px;
   border: 2px solid #2e7d32;
   width: 90%;
@@ -160,7 +159,7 @@ h2 {
   margin-top: 20px;
 
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); /* green shadow */
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -170,7 +169,7 @@ h2 {
 }
 .hacker-img.no-hover:hover {
   transform: none;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); /* original shadow */
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2); 
 }
 #email-box {
   background-color: #f4f4f4;
@@ -227,9 +226,9 @@ footer {
 }
 
 .icon {
-  height: 20px;         /* of 24px, afhankelijk van je knopgrootte */
+  height: 20px;         /
   width: auto;
   vertical-align: middle;
-  margin-right: 8px;    /* ruimte tussen icoon en tekst */
+  margin-right: 8px;    
 }
 
