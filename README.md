@@ -7,10 +7,9 @@
 We willen leerlingen leren:
 - Wat hacken is 
 - Hoe cybercriminelen te werk gaan
-- Welke stappen men kan nemen om gehackt te worden te voorkomen
+- Welke stappen je kan nemen om te voorkomen dat je gehackt wordt
 
 De website bevat interactieve en informatieve onderdelen die aansluiten bij de leefwereld van brugklassers. Zo dragen we bij aan een veiligere online wereld.
-(De interactieve delen (de wachtwoordchecker en het spel) zijn gemaakt met Python)
 
 De homepagina:
 ![alt text](Foto's_README/Homepagina.png)
