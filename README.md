@@ -12,8 +12,9 @@ We willen leerlingen leren:
 De website bevat interactieve en informatieve onderdelen die aansluiten bij de leefwereld van brugklassers. Zo dragen we bij aan een veiligere online wereld.
 (De interactieve delen zijn gemaakt met Python)
 
+De homepagina:
 ![alt text](Foto's_README/Screenshot_homepage.png)
-![alt text](Foto's_README/Screenshot_homepage2.png.png)
+
 
 ---
 
