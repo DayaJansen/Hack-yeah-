@@ -10,11 +10,22 @@ We willen leerlingen leren:
 - Welke stappen men kan nemen om gehackt te worden te voorkomen
 
 De website bevat interactieve en informatieve onderdelen die aansluiten bij de leefwereld van brugklassers. Zo dragen we bij aan een veiligere online wereld.
-(De interactieve delen zijn gemaakt met Python)
+(De interactieve delen (de wachtwoordchecker en het spel) zijn gemaakt met Python)
 
 De homepagina:
-![alt text](Foto's_README/Screenshot_homepage.png)
+![alt text](Foto's_README/Homepagina.png)
 
+Pagina: Manieren:
+![alt text](Foto's_README/Manieren.png)
+
+Pagina: Voorkomen:
+![alt text](Foto's_README/Voorkomen.png)
+
+Spel:
+![alt text](Foto's_README/Spel.png)
+
+Wachtwoordchecker:
+![alt text](Foto's_README/Wachtwoordchecker.png)
 
 ---
 
